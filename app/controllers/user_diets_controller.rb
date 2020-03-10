@@ -1,0 +1,2 @@
+class UserDietsController < ApplicationController
+end

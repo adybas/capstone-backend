@@ -1,0 +1,2 @@
+class UserDiet < ApplicationRecord
+end
