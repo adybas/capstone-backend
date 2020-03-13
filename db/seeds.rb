@@ -1,5 +1,7 @@
 require 'byebug'
 
+Ingredient.destroy_all
+
 mostPopularFoods = [
 "spice powder", 
 "acorn squash", 
