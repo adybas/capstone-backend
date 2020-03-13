@@ -1,4 +1,6 @@
-let mostPopularFoods = [
+require 'byebug'
+
+mostPopularFoods = [
 "spice powder", 
 "acorn squash", 
 "adobo sauce", 
@@ -40,8 +42,7 @@ let mostPopularFoods = [
 "baby carrots", 
 "baby corn", 
 "baby spinach leaves", 
-"baby-back ribs", 
-"baby-back ribs", 
+"baby-back ribs",  
 "bacon", 
 "bacon fat", 
 "baguette", 
@@ -62,7 +63,6 @@ let mostPopularFoods = [
 "beef chuck roast", 
 "beef stock", 
 "beef tenderloin", 
-"beer", 
 "beer", 
 "beets", 
 "bell pepper", 
@@ -1002,5 +1002,5 @@ let mostPopularFoods = [
 
 
 mostPopularFoods.each do | food |
-    food = Ingredient.new(name: food)
+    food = Ingredient.find_or_create_by(name: food)
 end
