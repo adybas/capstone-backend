@@ -4,8 +4,15 @@ class UsersController < ApplicationController
         render json: users
     end
 
+    def show
+        user = User.find_by(username: params[:username])
+        
+        # render json:  { user: user, favorites: user.recipes }
+        render json: user
+    end
+
     def create
-        user = User.find_or_create_by(first_name: params["first_name"], last_name: params["last_name"], username: params["username"])
+        user = User.create(first_name: params["first_name"], last_name: params["last_name"], username: params["username"])
         render json: user
     end
 end
