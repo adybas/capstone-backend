@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :ingredients
   resources :users
   post '/login', to: 'users#show'
+  post '/destroy', to: 'user_recipes#destroy'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   # post '/fakelogin', to: 'auth#fake_login'
 end
