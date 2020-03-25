@@ -30,10 +30,10 @@ ActiveRecord::Schema.define(version: 2020_03_18_011040) do
   create_table "recipes", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "vegetarian"
-    t.string "vegan"
-    t.string "glutenFree"
-    t.string "dairyFree"
+    t.boolean "vegetarian"
+    t.boolean "vegan"
+    t.boolean "glutenFree"
+    t.boolean "dairyFree"
     t.integer "weightWatcherSmartPoints"
     t.boolean "lowFodmap"
     t.integer "preparationMinutes"

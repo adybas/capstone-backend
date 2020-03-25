@@ -4,6 +4,7 @@ class User < ApplicationRecord
 
     has_many :user_recipes
     has_many :recipes, through: :user_recipes
+    validates :username, uniqueness: {case_sensitive: false }
 
     has_many :user_diets
     has_many :diets, through: :user_diets

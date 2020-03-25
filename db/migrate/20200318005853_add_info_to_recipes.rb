@@ -1,9 +1,9 @@
 class AddInfoToRecipes < ActiveRecord::Migration[6.0]
   def change
-    add_column :recipes, :vegetarian, :string
-    add_column :recipes, :vegan, :string
-    add_column :recipes, :glutenFree, :string
-    add_column :recipes, :dairyFree, :string
+    add_column :recipes, :vegetarian, :boolean
+    add_column :recipes, :vegan, :boolean
+    add_column :recipes, :glutenFree, :boolean
+    add_column :recipes, :dairyFree, :boolean
     add_column :recipes, :weightWatcherSmartPoints, :integer
     add_column :recipes, :lowFodmap, :boolean
     add_column :recipes, :preparationMinutes, :integer
