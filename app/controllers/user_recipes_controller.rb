@@ -10,12 +10,13 @@ class UserRecipesController < ApplicationController
     end 
 
     def create 
-        user_recipe = UserRecipe.create(params.require(:user_recipe).permit!)
+        user_recipe = UserRecipe.find_or_create_by(params.require(:user_recipe).permit!)
         render json: user_recipe
     end 
 
     def destroy 
         user_recipe = UserRecipe.find_by(user_id: params[:user_id], recipe_id: params[:recipe_id])
         user_recipe.destroy
+
     end 
 end

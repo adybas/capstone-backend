@@ -11,6 +11,12 @@ class UsersController < ApplicationController
 
     def create
         user = User.create(first_name: params["first_name"], last_name: params["last_name"], username: params["username"])
-        render json: { user: user, favorites: [] }
+        if user.valid? 
+            render json: { user: user, favorites: [] }
+        else   
+             render json: {
+               message:   user.errors.full_messages
+             }
+        end
     end
 end
